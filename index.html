@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html>
+<html ng-app="angularExerciseApp">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+<body>
+    <div class="container" ng-controller="greetingsCtrl">
+
+        <div class="panel panel-title">
+            <img class="angularImg" ng-src="{{logoImg}}"/>      
+            <h1 class="headerTitle">{{helloMessage}}</h1>
+        </div>
+
+        <div class="navbar">
+            <div class="navbar-inner">
+                <ul class="nav"></ul>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <div class="row">
+                <div class="span11"><h3 ng-bind="person.name"></h3></div>
+                <div class="span11"><h4>{{person.title}}</h4></div>
+            </div>
+            <div class="row">
+                <div class="span11"><p ng-bind-template="Birthdate: {{person.details.birthdate}} | Email: {{person.details.email}}"></p></div>
+            </div>
+
+            <div ng-bind-html="snippet">some title</div>
+
+            <hr />
+            <div ng-controller="eventsCtrl" class="row">
+                <h3>Sessions</h3>
+                <ul class="sessions">
+                    <li ng-repeat="session in event.sessions">
+                        <div class="row">
+                            <div class="well well-vote">
+                                <div class="voteBtn" ng-click="upVoteSession(session)">
+                                    <span class="glyphicon glyphicon-circle-arrow-up"></span>
+                                </div>
+                                <div class="badge badge-inverse">
+                                 {{session.voteCount}}
+                                </div>
+                                <div class="voteBtn" ng-click="downVoteSession(session)">
+                                    <span class="glyphicon glyphicon-circle-arrow-down"></span>
+                                </div>
+                            </div>
+                            <div class="well well-session">
+                                <h4 ng-bind="session.name"></h4>
+                                <h6>Creator: {{session.creatorName}}</h6>
+                            </div>
+
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="app/external/jquery-1.9.1.min.js"></script>
+    <script src="app/external/angular.min.js"></script>
+    <script src="app/external/bootstrap.min.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/greetingsController.js"></script>
+    <script src="app/eventsController.js"></script>
+    <script src="app/external/angular-sanitize.js"></script>
+
+
+</body>
+</html>
