@@ -1,0 +1,78 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AngularExercise", "..\..\..\..\..\..\dev\AngularExercise", "{873A689C-B8CA-4D18-9493-1E3063465D9D}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_50740"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\dev\AngularExercise\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50740\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_50740"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\dev\AngularExercise\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_50740\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "50740"
+		SlnRelativePath = "..\..\..\..\..\..\dev\AngularExercise\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Africa", "..\..\..\..\..\..\dev\Africa", "{9B3FF06A-17EE-44F9-9C09-0525FC135D61}"
+	ProjectSection(WebsiteProperties) = preProject
+		SccProjectName = "SAK"
+		SccAuxPath = "SAK"
+		SccLocalPath = "SAK"
+		SccProvider = "SAK"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_61004"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\dev\Africa\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61004\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_61004"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\..\..\dev\Africa\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_61004\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "61004"
+		SlnRelativePath = "..\..\..\..\..\..\dev\Africa\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{873A689C-B8CA-4D18-9493-1E3063465D9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{873A689C-B8CA-4D18-9493-1E3063465D9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3FF06A-17EE-44F9-9C09-0525FC135D61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3FF06A-17EE-44F9-9C09-0525FC135D61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 1
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://mae-laurenesuralta.visualstudio.com/defaultcollection
+		SccWebProject0 = true
+		SccProjectUniqueName0 = ..\\..\\..\\..\\..\\..\\dev\\Africa
+		SccProjectName0 = $/NewStuff/Africa/Africa
+		SccAuxPath0 = https://mae-laurenesuralta.visualstudio.com/defaultcollection
+		SccLocalPath0 = ..\\..\\..\\..\\..\\..\\dev\\Africa
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectEnlistmentChoice0 = 2
+	EndGlobalSection
+EndGlobal
