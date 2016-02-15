@@ -3,6 +3,8 @@
     var app = angular.module('angularExerciseApp');
 
     app.controller('eventsCtrl', ['$scope', function ($scope) {
+        $scope.sortOrder = 'name';
+        $scope.boolVal = false;
         $scope.event = {
             name: 'Angular Exercise',
             date: 'April 10 2016',
@@ -14,18 +16,24 @@
             },
             sessions: [
                 {
-                    name: 'Directives Class',
+                    name: 'Directives Class Advanced',
                     creatorName: 'Jonas Nilsson',
+                    duration: 1,
+                    level: 'Beginner',
                     voteCount: 0
                 },
                 {
                     name: 'Scopes for the fun of it',
                     creatorName: 'Ida Benjaminsson',
+                    duration: 2,
+                    level: 'Advanced',
                     voteCount: 0
                 },
                 {
                     name: 'Well behaved controllers',
                     creatorName: 'Louise Bennett',
+                    duration: 4,
+                    level: 'Intermediate',
                     voteCount: 0
                 }
             ]

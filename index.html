@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/main.css" />
 
 </head>
-<body>
+<body ng-cloak>
     <div class="container" ng-controller="greetingsCtrl">
 
         <div class="panel panel-title">
@@ -25,21 +25,41 @@
         </div>
 
         <div class="panel-body">
-            <div class="row">
+            <div ng-class="myClass" class="row">
                 <div class="span11"><h3 ng-bind="person.name"></h3></div>
                 <div class="span11"><h4>{{person.title}}</h4></div>
             </div>
             <div class="row">
-                <div class="span11"><p ng-bind-template="Birthdate: {{person.details.birthdate}} | Email: {{person.details.email}}"></p></div>
+                <div class="span11"><p ng-style="myStyle" ng-bind-template="Birthdate: {{person.details.birthdate}} | Email: {{person.details.email}}"></p></div>
             </div>
 
+            <button class="btn" ng-disabled="disableBtn">Disabled</button>
             <div ng-bind-html="snippet">some title</div>
+          {{[1,2,3] [1]}}
 
             <hr />
             <div ng-controller="eventsCtrl" class="row">
+                <div>
+                    <h2 ng-show="boolVal">Show This</h2>
+                    <h2 ng-hide="boolVal">Hide This</h2>
+                </div>
                 <h3>Sessions</h3>
+                Order by:
+                <select ng-model="sortOrder" class="input-sm">
+                    <option selected value="name">Names</option>
+                    <option selected value="voteCount">Vote Count</option>
+                </select>
+                Show:
+                <select ng-model="query.level" class="input-sm">
+                    <option selected value="">All</option>
+                    <option selected value="Beginner">Beginner</option>
+                    <option selected value="Intermediate">Intermediate</option>
+                    <option selected value="Advanced">Advanced</option>
+                </select>
+
+                <br /> <br />
                 <ul class="sessions">
-                    <li ng-repeat="session in event.sessions">
+                    <li ng-repeat="session in event.sessions | orderBy: sortOrder | filter: query ">
                         <div class="row">
                             <div class="well well-vote">
                                 <div class="voteBtn" ng-click="upVoteSession(session)">
@@ -53,8 +73,10 @@
                                 </div>
                             </div>
                             <div class="well well-session">
-                                <h4 ng-bind="session.name"></h4>
-                                <h6>Creator: {{session.creatorName}}</h6>
+                                <h4 ng-bind="session.name" ></h4>
+                                <h6>Creator: {{session.creatorName | uppercase}}</h6>
+                                <h6>Level: {{session.level}}</h6>
+                                <h6>Duration: {{session.duration | durations }}</h6>
                             </div>
 
                         </div>
@@ -75,6 +97,7 @@
     <script src="app/greetingsController.js"></script>
     <script src="app/eventsController.js"></script>
     <script src="app/external/angular-sanitize.js"></script>
+    <script src="app/filters.js"></script>
 
 
 </body>

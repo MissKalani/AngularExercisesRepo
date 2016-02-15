@@ -2,6 +2,10 @@
     background-color: #000000;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
 .panel {
     background-color: burlywood;
     margin: 20px 0 0 0;
@@ -33,7 +37,7 @@
 }
 
 .well-session {
-    height: 99px;
+
     width: 700px;
     float: left;
     margin-bottom: -3px;
@@ -61,4 +65,12 @@ li {
 
 .headerTitle {
     display: inline-block;
+}
+
+.blue{
+    color: blue;
+}
+
+.input-sm, .input-lg{
+    color: black;
 }

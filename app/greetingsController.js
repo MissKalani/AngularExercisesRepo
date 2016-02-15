@@ -4,6 +4,9 @@
 
     app.controller('greetingsCtrl', ['$scope', function ($scope) {
         $scope.helloMessage = "Hello from the other side!";
+        $scope.myStyle = { color: 'red' };
+        $scope.myClass = "blue";
+        $scope.disableBtn = true;
         $scope.person = {
             name: 'Mae Laurene Suralta',
             title: 'IT-Consultant',
